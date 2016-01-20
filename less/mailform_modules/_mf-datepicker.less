@@ -1,0 +1,140 @@
+@rd-datepicker-bg: #fff;
+@rd-dp-item-today-bg: #111;
+@rd-dp-item-selected-bg: #4C3469;
+
+.rd-datepicker {
+  background: @rd-datepicker-bg;
+  color: #111;
+  border-radius: 5px;
+  border: 1px solid @rd-datepicker-bg;
+}
+
+.dp-item {
+  border-radius: 50%;
+}
+
+.dp-item-hover {
+  background: #ececec;
+}
+
+.dp-item-offset {
+  color: #c6bbba;
+}
+
+.dp-item-today {
+  color: #fff;
+  background: @rd-dp-item-today-bg;
+}
+
+.dp-item-selected {
+  color: #fff;
+  background: @rd-dp-item-selected-bg;
+}
+
+/* Mail Form Date Picker
+========================================================*/
+
+.mfDatePicker {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 15px;
+  padding: 10px 15px;
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+  .box-shadow(3px 3px 3px 0 rgba(0,0,0,.3));
+  .transition(.5s all ease-in-out);
+  .animation(dropd-anim-fo .4s ease-in-out forwards);
+  .rd-datepicker;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 15px;
+    .triangle(top, 12px, 6px, @rd-datepicker-bg);
+  }
+
+  table {
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 3px;
+    font-size: 12px;
+
+    th {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    td {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      cursor: pointer;
+      .transition(.3s all ease);
+
+      .dp-item;
+      &:hover {
+        .dp-item-hover;
+      }
+
+      &.dp-offset {
+        .dp-item-offset;
+      }
+
+      &.dp-today {
+        .dp-item-today;
+      }
+
+      &.dp-selected {
+        .dp-item-selected;
+      }
+    }
+  }
+
+  &_next, &_prev {
+    font: 400 22px 'material-design';
+    line-height: inherit;
+    text-align: center;
+    color: @rd-dp-item-today-bg;
+    cursor: pointer;
+
+    &:hover {
+      color: @rd-dp-item-selected-bg;
+    }
+  }
+
+  &_panel {
+    text-align: center;
+    padding: 0 2px;
+    line-height: 30px;
+  }
+
+  &_next {
+    float: right;
+
+    &:before {
+      content: '\e0c2';
+    }
+  }
+
+  &_prev {
+    float: left;
+
+    &:before {
+      content: '\e0c3';
+    }
+  }
+
+  &_panel + table {
+    margin-top: 5px;
+  }
+
+  &.open {
+    .animation(dropd-anim .5s ease-in-out forwards);
+    opacity: 1;
+    visibility: visible;
+  }
+}

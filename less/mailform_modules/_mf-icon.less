@@ -1,0 +1,125 @@
+@mf-icon-font: 400 20px/24px 'material-design';
+
+
+@rd-icon: 'phone','\e0f4', 'email', '\e070', 'name', '\e18b', 'birthday', '\e05d', 'message', 'none';
+@length: length(@rd-icon);
+
+
+
+/* Mail Form Icon
+========================================================*/
+.mfIcon-preset-1(@state0, @state1, @stage2) {
+  .mfIcon {
+    span {
+      &:before {
+        content: @state0;
+      }
+
+      &:after {
+        content: @state1;
+        .transform(scale(0) rotate(-180deg));
+        .animation(zoom-out .4s ease-in-out 1 forwards);
+      }
+    }
+  }
+
+  .mfIcon.state-1 {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      .animation(line 1.2s .4s infinite);
+    }
+
+    span {
+      &:before {
+        .transform(scale(0) rotate(90deg));
+      }
+
+      &:after {
+        .transform(scale(1) rotate(-35deg));
+        .animation(~'zoom-in-state-1 .4s ease-in-out 1 forwards, anim-1 1.2s .3s infinite, anim-2 .6s .3s infinite');
+      }
+    }
+  }
+
+  .mfIcon.state-2 {
+    span {
+      &:before {
+        content: @stage2;
+        .transform(scale(0) rotate(90deg));
+      }
+
+      &:after {
+        .transform(scale(1) rotate(-210deg));
+        .animation(~'zoom-in-state-2 .4s ease-in-out 1 forwards, anim-3 .6s .4s infinite');
+      }
+    }
+  }
+
+
+}
+
+
+  .mfIcon {
+    
+      position: absolute;
+      text-align: center;
+      top: 12px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      color: #FFF;
+      font: @mf-icon-font;
+
+      span {
+        &:before, &:after {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-top: -10px;
+          margin-left: -10px;
+          .transition(.4s all ease-in-out);
+        }
+      }
+    
+  }
+
+
+.mfIcon-preset-1('\e0d8', '\e060', '\e060');
+
+.mfInput {
+  
+    .loop (@index) when (@index > 0){
+    @content: e(extract(@rd-icon, @index));
+    @name : e(extract(@rd-icon, @index - 1));
+
+      input[name='@{name}'] ~ .mfIcon,
+      select[name='@{name}'] ~ .mfIcon,
+      textarea[name='@{name}'] ~ .mfIcon {
+       & when (@content = none) {
+          display: none;
+        } 
+        & when not (@content = none) {
+          span:before {
+            content: '@{content}';
+          }
+        }
+      }
+      .loop (@index - 2);
+    }
+    .loop(0){} 
+    .loop(@length);
+  // }
+  input:-webkit-autofill ~ .mfIcon span,
+  textarea:-webkit-autofill ~ .mfIcon span {
+    &:before {
+      color: #2D2D2D;
+    }
+  }
+}
+

@@ -1,0 +1,87 @@
+//
+// Thumbnails
+// --------------------------------------------------
+
+// Mixin and adjust the regular image class
+.thumbnail {
+  //max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  .img-thumb{
+    position: relative;
+    h2{
+      position: absolute;
+      left: 26px;
+      bottom: 20px;
+    }
+  }
+
+  // Image captions
+  .caption {
+    padding: 19px 22px 102px 30px;
+    position: relative;
+    min-height: 232px;
+    .btn{
+      position: absolute;
+      left: 30px;
+      bottom: 29px;
+    }
+  }
+}
+
+.thumbnail_mod{
+  .caption{
+    padding: 19px 22px 18px 30px;
+    //min-height: 167px;
+    min-height: 0;
+  }
+}
+.thumbnail_mod2{
+  .caption{
+    padding: 19px 0px 0px 0px;
+    min-height: 0;
+    h5{
+      color: @secondary-clr;
+      a:hover{
+        color: @brand-primary;
+      }
+    }
+  }
+}
+
+.thumbnail-1 {
+  padding-bottom: 39px;
+  margin-left: auto;
+  margin-right: auto;
+  // Image captions
+  .caption {
+    margin-top: 21px;
+  }
+}
+
+.thumbnail3 {
+  max-width: 270px;
+  // Image captions
+  .caption {
+
+  }
+}
+
+.thumbnail4 {
+  max-width: 370px;
+  // Image captions
+  .caption {
+
+  }
+}
+
+.thumbnail6 {
+  max-width: 570px;
+  // Image captions
+  .caption {
+
+  }
+  @media (max-width: 991px) {
+    max-width: 370px;
+  }
+}

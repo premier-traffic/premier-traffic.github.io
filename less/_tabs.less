@@ -1,0 +1,31 @@
+/*=================       Tabs     ======================*/
+.resp-tabs-list {
+  li{
+    cursor: pointer;
+
+    &:hover{
+
+    }
+  }
+}
+
+.resp-accordion {
+  display: none;
+}
+
+.resp-tab-content {
+  display: none;
+}
+.resp-tab-content-active {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .resp-accordion {
+    display: block;
+  }
+
+  .resp-tabs-list {
+    display: none;
+  }
+}

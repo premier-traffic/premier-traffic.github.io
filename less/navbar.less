@@ -1,0 +1,305 @@
+//
+// Navbars
+// --------------------------------------------------
+
+// Wrapper and base class
+//
+// Provide a static navbar from which we expand to create full-width, fixed, and
+// other navbar variations.
+
+.navbar {
+  position: relative;
+  min-height: 47px; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-bottom: 0;
+  float: left;
+
+  //display: inline-block;
+  // Prevent floats from breaking the navbar
+  &:extend(.clearfix all);
+
+  @media (min-width: @grid-float-breakpoint) {
+    border-radius: 0;
+  }
+}
+
+//
+// Navbar alignment options
+//
+// Display the navbar across the entirety of the page or fixed it to the top or
+// bottom of the page.
+
+// Static top (unfixed, but 100% wide) navbar
+.navbar-static-top {
+  z-index: @zindex-navbar;
+  // border-width: 0 0 1px;
+
+  @media (min-width: @grid-float-breakpoint) {
+    border-radius: 0;
+  }
+}
+
+// Fix the top/bottom navbars when screen real estate supports it
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: @zindex-navbar-fixed;
+
+  // Undo the rounded corners
+  @media (min-width: @grid-float-breakpoint) {
+    border-radius: 0;
+  }
+}
+
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+.navbar-fixed-bottom {
+  bottom: 0;
+  margin-bottom: 0; // override .navbar defaults
+  border-width: 1px 0 0;
+}
+
+// Navbar heading
+//
+// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
+// styling of responsive aspects.
+
+.navbar-header {
+  &:extend(.clearfix all);
+  //margin-top: 45px;
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+  }
+}
+
+// Brand/project name
+
+.navbar-brand {
+  // float: left;
+  display: inline-block;
+  a {
+
+    position: relative;
+    padding-left: 88px;
+
+    &:hover,
+    &:focus {
+      color: @navbar-default-brand-hover-color;
+    //  text-decoration: none;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      width: 74px;
+      height: 45px;
+      background: url("../images/logo.png");
+      top: -9px;
+      left: 0;
+    }
+  }
+
+  //position: relative;
+  //padding-left: 86px;
+  //padding-top: 4%;
+  //padding-bottom: 7%;
+
+
+}
+
+// Navbar nav links
+//
+// Builds on top of the `.nav` components with its own modifier class to make
+// the nav the full height of the horizontal nav (above 768px).
+
+.navbar-nav {
+  &:extend(.clearfix all);
+  //padding-top: 68px;
+  //padding-bottom: 40px;
+  // Uncollapse the nav
+  @media (min-width: @grid-float-breakpoint) {
+    margin: 0;
+    font-family: @font-family-sec;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (max-width: 991px){
+    }
+
+    > li {
+      float: left;
+
+      > a {
+        padding: 14px 20px 14px;
+        display: block;
+
+        @media (max-width: 1199px) {
+          //padding: 9px 35px 10px;
+        }
+        @media (max-width: 991px){
+          //padding: 8px 25px 9px;
+        }
+
+        @media (max-width: @grid-float-breakpoint-max) {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-style: italic;
+        }
+
+        &:hover {
+
+        }
+      }
+      &.active > a,
+      &.sfHover > a {
+
+      }
+      & + li {
+        border-left:1px solid rgba(51,51,51,0.15);
+
+      }
+      &:last-child{
+        border-right:1px solid rgba(51,51,51,0.15);
+      }
+    }
+  }
+}
+
+// Component alignment
+//
+// Repurpose the pull utilities as their own navbar utilities to avoid specificity
+// issues with parents and chaining. Only do this when the navbar is uncollapsed
+// though so that navbar contents properly stack and align in mobile.
+//
+// Declared after the navbar components to ensure more specificity on the margins.
+
+@media (min-width: @grid-float-breakpoint) {
+  .navbar-left {
+    .pull-left();
+  }
+
+  .navbar-right {
+    .pull-right();
+    // margin-right: -@navbar-padding-horizontal;
+    margin-right: 0;
+
+    ~ .navbar-right {
+      margin-right: 0;
+    }
+  }
+}
+
+// Alternate navbars
+// --------------------------------------------------
+
+// Default navbar
+.navbar-default {
+  background-color: @navbar-default-bg;
+  border-color: @navbar-default-border;
+
+  .navbar-brand {
+    color: @navbar-default-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-default-brand-hover-color;
+      background-color: @navbar-default-brand-hover-bg;
+    }
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-default-link-color;
+
+      &:focus {
+        color: @navbar-default-link-color;
+      }
+
+      &:hover {
+        color: @navbar-default-link-hover-color;
+        background-color: @navbar-default-link-hover-bg;
+      }
+      // &:focus{
+      //  background-color: @navbar-default-bg;
+      // }
+    }
+    > .active > a,
+    > .sfHover > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-active-color;
+        background-color: @navbar-default-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-default-link-disabled-color;
+        background-color: @navbar-default-link-disabled-bg;
+      }
+    }
+  }
+}
+
+// Inverse navbar
+
+.navbar-inverse {
+  background-color: @navbar-inverse-bg;
+  border-color: @navbar-inverse-border;
+
+  .navbar-brand {
+    color: @navbar-inverse-brand-color;
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-brand-hover-color;
+      background-color: @navbar-inverse-brand-hover-bg;
+    }
+  }
+
+  .navbar-text {
+    color: @navbar-inverse-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+      color: @navbar-inverse-link-color;
+
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-hover-bg;
+      }
+    }
+    > .active > a,
+    > .sfHover > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-active-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @navbar-inverse-link-disabled-color;
+        background-color: @navbar-inverse-link-disabled-bg;
+      }
+    }
+  }
+}
+
+// ------------------------------------
+// To show only _navbar 
+//-------------------------------------
+@media (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+}

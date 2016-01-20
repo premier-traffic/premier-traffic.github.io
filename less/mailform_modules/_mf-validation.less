@@ -1,0 +1,144 @@
+/* Mail Form Validation
+  ========================================================*/
+
+.mfValidation {
+  .transform-origin(0% 50%);
+  .transition(.3s all ease);
+  .animation(notifanim-fo .4s cubic-bezier(.55, 0, .1, 1) forwards);
+  .box-shadow(2px 2px 2px 0 rgba(0,0,0,0.5));
+  .border-radius(5px);
+  position: absolute;
+  // top: 25px;
+  // left: 100%;
+  // width: 210px;
+  margin-top: -20px;
+  margin-left: 10px;
+  // padding: 10px;
+  // min-height: 40px;
+  font-weight: 300;
+  font-size: 12px;
+  // line-height: 20px;
+  background: #111;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 998;
+
+// ========= My 
+  line-height: 12px;
+  min-height: 20px;
+  padding: 3px 7px;
+  right: 0;
+  top: 0;
+  width: 167px;
+//==========
+
+
+  &:hover {
+    background: #231634;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    // right: 100%;
+    // top: 50%;
+    // .transform(translateY(-50%));
+    .triangle(left, 5px, 8px, #111);
+
+// ========= My
+     border-width: 6px 12px 6px 0;
+     right: 161px;
+     top: 12px;
+     .transform(rotate(-45deg));
+// ============
+
+
+  }
+  &:hover {
+    &:before {
+      // .triangle(left, 5px, 8px, #231634);
+// ========= My
+      border-left-color: #231634;
+//=============
+    }
+  }
+
+  &.error {
+    .transform(scale(1));
+    opacity: 1;
+    visibility: visible;
+    .animation(notifanim .4s cubic-bezier(.55, 0, .1, 1) forwards);
+  }
+
+  @media (max-width: 767px) {
+    text-align: right;
+    top: -17px;
+    left: auto;
+    bottom: 100%;
+    right: 10px;
+    background: none;
+    padding: 0;
+    margin: 0 0 3px;
+    min-height: 0;
+    color: #FF0000;
+    .box-shadow(none);
+    &:before {
+      display: none;
+    }
+
+    &:hover{
+      background: none;
+      right: 40px;
+    }
+  }
+}
+
+.keyframes(notifanim-fo) {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  99% {
+    visibility: hidden;
+  }
+
+  100% {
+    visibility: hidden;
+    transform: scale(.3);
+    opacity: 0;
+  }
+}
+
+.keyframes(notifanim) {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(.3);
+  }
+
+  1% {
+    visibility: visible;
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(.9);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

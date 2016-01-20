@@ -1,0 +1,29 @@
+/*==================   Accordion    ======================*/
+.accordion {
+}
+
+.accordion_header {
+
+}
+
+.accordion_cnt {
+
+}
+
+.ui-accordion-header {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '\f0d7';
+    color: @secondary-clr;
+    font: 400 20px/20px @fa;
+  }
+
+  &-active:after {
+    content: '\f106';
+  }
+}

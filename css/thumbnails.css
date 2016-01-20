@@ -1,0 +1,52 @@
+.thumbnail {
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail .img-thumb {
+  position: relative;
+}
+.thumbnail .img-thumb h2 {
+  position: absolute;
+  left: 26px;
+  bottom: 20px;
+}
+.thumbnail .caption {
+  padding: 19px 22px 102px 30px;
+  position: relative;
+  min-height: 232px;
+}
+.thumbnail .caption .btn {
+  position: absolute;
+  left: 30px;
+  bottom: 29px;
+}
+.thumbnail_mod .caption {
+  padding: 19px 22px 18px 30px;
+  min-height: 167px;
+}
+.thumbnail_mod2 .caption {
+  padding: 19px 0px 0px 0px;
+  min-height: 167px;
+}
+.thumbnail-1 {
+  padding-bottom: 39px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.thumbnail-1 .caption {
+  margin-top: 21px;
+}
+.thumbnail3 {
+  max-width: 270px;
+}
+.thumbnail4 {
+  max-width: 370px;
+}
+.thumbnail6 {
+  max-width: 570px;
+}
+@media (max-width: 991px) {
+  .thumbnail6 {
+    max-width: 370px;
+  }
+}

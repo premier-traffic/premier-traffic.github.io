@@ -1,0 +1,1061 @@
+//
+// Typography
+// --------------------------------------------------
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  //line-height: @headings-line-height;
+  color: @headings-color;
+  margin: 0;
+}
+
+h1, .h1 {
+  font-size: @font-size-h1;
+  line-height: @font-lh-h1;
+  font-weight: 700;
+}
+
+h2, .h2 {
+  font-size: @font-size-h2;
+  line-height: @font-lh-h2;
+  small {
+  }
+  @media (max-width: 991px) {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+h3, .h3 {
+  font-size: @font-size-h3;
+  line-height: @font-lh-h3;
+  small {
+    margin-top: 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    float: right;
+    //.material-design-keyboard53{
+    //  color: @secondary-clr;
+    //  font-size: 30px;
+    //  line-height: 1;
+    //  &:before{
+    //    position: relative;
+    //    top: 6px;
+    //  }
+    //}
+    a {
+      span{
+        text-decoration: underline;
+      }
+      position: relative;
+      padding-right: 21px;
+      &:before {
+        content: '\e0c2';
+        position: absolute;
+        font-weight: 400;
+        font-family: 'material-design';
+        color: @secondary-clr;
+        font-size: 30px;
+        line-height: 1;
+        top: -5px;
+        right: -7px;       
+      }
+    }
+    @media (max-width: 991px) {
+      float: none;
+      display: block;
+    }
+  }
+  @media (max-width: 991px) {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+
+h4, .h4 {
+  font-size: @font-size-h4;
+  line-height: @font-lh-h4;
+  @media (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+h5, .h5 {
+  font-size: @font-size-h5;
+  line-height: @font-lh-h5;
+  color: @brand-primary;
+}
+
+h6, .h6 {
+  font-size: @font-size-h6;
+  line-height: @font-lh-h6;
+}
+
+// Body text
+// -------------------------
+
+p {
+  line-height: @line-height-base;
+  margin: 0;
+}
+
+.lead {
+
+}
+
+.txt1 {
+
+}
+
+.icon {
+  font-size: 48px;
+  display: inline-block;
+}
+
+.icon-top {
+  padding-top: 12px;
+  @media (max-width: 450px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.icon-lg {
+  display: inline-block;
+  font-size: 38px;
+  text-align: center;
+  height: 69px;
+  width: 69px;
+  line-height: 69px;
+  background: @brand-primary;
+  color: @white-clr;
+  border-radius: 50%;
+}
+
+.icon-lg-2{
+  display: inline-block;
+  text-align: center;
+  font-size: 72px;
+  line-height: 84px;
+  color: rgba(51, 51, 51, .1);
+  transition: 0.2s;
+}
+
+.shadow-1 {
+  .box-shadow(inset 0px -9px 50px -20px rgba(51, 51, 51, 0.2));
+}
+.shadow-2 {
+  .box-shadow(0px 9px 50px -20px rgba(51, 51, 51, 0.2));
+}
+
+// Main Layout
+// -----------------------
+* + .row {
+  margin-top: 30px;
+}
+
+.row + * {
+  margin-top: 30px;
+}
+
+.row + .row {
+  margin-top: 30px;
+}
+
+* + .btn {
+  margin-top: 20px;
+}
+
+h3 + * {
+  margin-top: 28px;
+}
+h3 + img {
+  margin-top: 37px;
+}
+
+h3 + h5 {
+  margin-top: 28px;
+}
+
+* + .index-list{
+  margin-top: 28px;
+}
+
+h3 + .row {
+  margin-top: 31px;
+}
+
+img + h5{
+  margin-top: 20px;
+}
+
+h5 + * {
+  margin-top: 14px;
+}
+
+h4 + address {
+  margin-top: 5px;
+}
+
+p + p{
+  margin-top: 19px;
+}
+
+* + .offs1 {
+  margin-top: 10px;
+}
+
+* + .marked-list{
+  margin-top: 24px;
+}
+.marked-list + *{
+  margin-top: 24px;
+}
+
+.ins1 {
+  padding-left: 8%;
+  padding-right: 8%;
+  @media (max-width: 767px) {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
+
+.offs-negative {
+  margin-top: -274px;
+  @media (max-width: 1650px) {
+    margin-top: 60px;
+  }
+}
+
+.srch {
+  position: relative;
+}
+
+// FA
+// -----------------------
+
+.fa {
+  line-height: inherit;
+}
+
+[class*='fa-'] {
+  &:before {
+    font-family: @fa;
+    color: inherit;
+  }
+}
+
+// Emphasis & misc
+// -------------------------
+
+// Ex: (12px small font / 14px base font) * 100% = about 85%
+small,
+.small {
+  // font-size: floor((100% * @font-size-small / @font-size-base));
+  // font-size: inherit;
+}
+
+mark,
+.mark {
+  background-color: @brand-warning;
+  padding: .2em;
+}
+
+// Alignment
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+}
+
+.left991 {
+  @media (max-width: 991px) {
+    text-align: left;
+  }
+}
+
+.center991 {
+  @media (max-width: 991px) {
+    text-align: center;
+  }
+}
+
+.right991 {
+  @media (max-width: 991px) {
+    text-align: right;
+  }
+}
+
+.center767 {
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.left767 {
+  @media (max-width: 767px) {
+    text-align: left;
+  }
+}
+
+.right767 {
+  @media (max-width: 767px) {
+    text-align: right;
+  }
+}
+
+// Transformation
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.fw-l {
+  font-weight: 300;
+}
+
+.fw-n {
+  font-weight: 400;
+}
+
+.fw-m {
+  font-weight: 500;
+}
+
+.fw-sb {
+  font-weight: 600;
+}
+
+.fw-b {
+  font-weight: 700;
+}
+
+.fw-xb {
+  font-weight: 800;
+}
+
+.fw-h {
+  font-weight: 900;
+}
+
+.white {
+  color: @white-clr;
+}
+
+.txt-sec {
+  color: @secondary-clr;
+}
+
+.txt-mid {
+  color: @default-mid;
+}
+
+.txt-light {
+  color: @default-light;
+}
+
+// Contextual colors
+.text-muted {
+  color: @text-muted;
+}
+
+.text-primary {
+  color: @brand-primary;
+}
+
+.text-success {
+  color: @brand-success;
+}
+
+.text-info {
+  color: @brand-info;
+}
+
+.text-warning {
+  color: @brand-warning;
+}
+
+.text-danger {
+  color: @brand-danger;
+}
+
+// Contextual backgrounds
+// For now we'll leave these alongside the text classes until v4 when we can
+// safely shift things around (per SemVer rules).
+.bg-primary {
+  // Given the contrast here, this is the only class to have its color inverted
+  // automatically.
+  background: @brand-primary;
+  // .bg-variant(@brand-primary);
+
+  p, h2, h5 {
+    color: @white-clr;
+  }
+
+  //a:hover{
+  //  //color: @default-mid;
+  //}
+  //.btn-warning{
+  //  &:hover{
+  //    color: @brand-primary;
+  //  }
+  //}
+}
+
+.bg-lighter {
+  background: @default-lighter;
+}
+
+.bg-secondary {
+  background: @secondary-clr;
+  h4 {
+    color: @white-clr;
+    a {
+      &:hover {
+        color: @brand-primary;
+      }
+    }
+  }
+  address {
+    color: @white-clr;
+  }
+  .phone {
+    a {
+      &:hover {
+        color: @white-clr;
+      }
+    }
+  }
+}
+
+.bg-secondary-rgba {
+  background: rgba(51, 51, 51, 0.05);
+}
+
+.bg-success {
+  background: @brand-success;
+}
+
+.bg-info {
+  background: @brand-info;
+}
+
+.bg-warning {
+  background: @brand-warning;
+}
+
+.bg-danger {
+  background: @brand-danger;
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: ((@line-height-computed / 2) - 1);
+  margin: (@line-height-computed * 2) 0 @line-height-computed;
+  border-bottom: 1px solid @page-header-border-color;
+}
+
+// Lists
+// -------------------------
+
+// Unordered and Ordered lists
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  li {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    a {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+  }
+}
+
+// List options
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+/*=================   List Inline   =====================*/
+.list-inline {
+  .list-unstyled();
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+/*=================   Inline list   =====================*/
+
+.inline-list {
+  //margin-top: 30px;
+  .fa {
+    position: relative;
+    font: 0/0 a;
+    &:hover {
+      &:before {
+        color: @secondary-clr;
+      }
+    }
+  }
+  .fa:before {
+    font-size: 16px;
+    .transition(.2s);
+    color: @default-mid;
+    position: absolute;
+    left: -0px;
+    top: -7px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  li + li {
+    margin-left: 21px;
+  }
+  //@media (max-width: 991px) {
+  //  .fa:before {
+  //    left: -25px;
+  //    padding-left: 2px;
+  //    @media (max-width: 767px){
+  //      left: 0;
+  //    }
+  //  }
+  //}
+
+}
+
+/*================      Flex list     =================*/
+
+.flex-list {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+}
+
+.flex-list li {
+  display: table-cell;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .flex-list {
+    li {
+      display: block;
+    }
+  }
+}
+
+/*================      Index list     =================*/
+
+.index-list {
+  counter-reset: num;
+}
+
+.index-list li {
+  position: relative;
+  padding-left: 83px;
+
+  &:before {
+    content: counter(num, decimal);
+    counter-increment: num;
+    position: absolute;
+    font-family: @font-family-sec;
+    color: rgba(51, 51, 51, 0.1);
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 1;
+    top: -16px;
+    left: 10px;
+    .transition(.2s all ease);
+  }
+
+  &.xlist_ins1 {
+    padding-left: 113px;
+  }
+
+  & + li {
+    margin-top: 0;
+  }
+  &:hover {
+    &:before {
+      color: rgba(51, 51, 51, 1);
+    }
+  }
+}
+
+.index-list_mod{
+  li{
+    padding-left: 100px;
+
+    &:before{
+      left: 5px;
+    }
+
+    & + li{
+      margin-top: 23px;
+    }
+  }
+}
+
+.index-list-2{
+  li{
+    padding-left: 115px;
+    &:before{
+      left: 21px;
+    }
+  }
+}
+
+/*================    Marked list     =================*/
+
+.marked-list {
+  display: block;
+ @media (max-width: 991px){
+   max-width: 270px;
+   margin-left: auto;
+   margin-right: auto;
+ }
+  li {
+    text-align: left;
+    position: relative;
+    padding-left: 24px;
+    &:before {
+      position: absolute;
+      content: '\f054';
+      font-family: @fa;
+      font-size: 12px;
+      color: @brand-primary;
+      left: 0;
+      top: 3px;
+    }
+    & + li {
+      margin-top: 8px;
+    }
+  }
+  a {
+    &:hover {
+      color: @brand-primary;
+    }
+  }
+}
+
+/*================    Term list     =================*/
+
+.terms-list {
+  margin-top: 28px;
+  dt {
+    //font-weight: 400;
+    //color: @brand-primary;
+    //font-size: 20px;
+  }
+
+  * + dt {
+    margin-top: 23px;
+  }
+
+  dt + * {
+    margin-top: 14px;
+  }
+
+  dd {
+
+  }
+  & + * {
+    margin-top: 35px;
+    a {
+      color: @brand-primary;
+    }
+    a:hover {
+      color: @secondary-clr;
+    }
+  }
+}
+
+// Description Lists
+dl {
+  padding: 0;
+  margin: 0;
+  font-style: normal;
+}
+
+dt,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+dt {
+}
+
+dd {
+}
+
+// Horizontal description lists
+//
+// Defaults to being stacked without any of the below styles applied, until the
+// grid breakpoint is reached (default of ~768px).
+
+.dl-horizontal {
+  dd {
+    &:extend(.clearfix all); // Clear the floated `dt` if an empty `dd` is present
+  }
+
+  @media (min-width: @grid-float-breakpoint) {
+    dt {
+      float: left;
+      width: (@dl-horizontal-offset - 20);
+      clear: left;
+      text-align: right;
+      .text-overflow();
+    }
+
+    dd {
+      margin-left: @dl-horizontal-offset;
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Abbreviations and acronyms
+abbr[title],
+  // Add data-* attribute to help out our tooltip plugin, per https://github.com/twbs/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @abbr-border-color;
+}
+
+.initialism {
+  font-size: 90%;
+  .text-uppercase();
+}
+
+// Blockquotes
+blockquote {
+  margin: 0;
+  font-style: normal;
+  // font-size: @blockquote-font-size;
+  // color: inherit;
+  cite {
+
+    font-style: normal;
+    display: inline-block;
+  }
+  * + cite.h5 {
+    margin-top: 12px;
+  }
+  q {
+    .clearfix();
+  }
+
+  * + & {
+    margin-top: 31px;
+  }
+
+  &.media{
+    .media-left{
+      padding-right: 31px;
+    }
+  }
+}
+
+// Opposite alignment of blockquote
+//
+// Heads up: `blockquote.pull-right` has been deprecated as of v3.1.0.
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid @blockquote-border-color;
+  border-left: 0;
+  text-align: right;
+
+  // Account for citation
+  footer,
+  small,
+  .small {
+    &:before {
+      content: '';
+    }
+    &:after {
+      content: '\00A0 \2014'; // nbsp, em dash
+    }
+  }
+}
+
+// Addresses
+address {
+  font-style: normal;
+
+  &.h5{
+    * + &{
+      margin-top: 21px;
+    }
+    & + *{
+      margin-top: 17px;
+    }
+  }
+
+}
+
+.addr1 {
+  margin-top: 9px;
+  color: @text-color;
+
+  dl {
+    padding-left: 0;
+    margin-top: 0px;
+    max-width: 335px;
+    dt, dd {
+      //font-size: 16px;
+      display: inline-block;
+      //font-weight: 300;
+    }
+    dt {
+      width: 31%;
+      min-width: 93px;
+    }
+    dd {
+      width: 50%;
+      a:hover{
+        color: @brand-primary;
+      }
+      //@media (max-width: 1199px) {
+      //  width: 55%;
+      //}
+    }
+    dd + dt {
+      margin-top: 0;
+    }
+    dt + dd {
+      margin-top: 0;
+    }
+
+  }
+  & .mail {
+    dt {
+      width: 31%;
+      min-width: 53px;
+    }
+    dd {
+      // font-weight: 700;
+      font-size: 16px;
+      color: @brand-primary;
+      a:hover{
+        color: @secondary-clr;
+      }
+    }
+  }
+  @media (max-width: 1199px){
+    dl, & .mail{
+      dt{
+        width: 25%;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    max-width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+
+// Copyright
+
+.rights {
+  padding-top: 11px;
+  padding-bottom: 12px;
+  p {
+    font-size: 12px;
+    line-height: 28px;
+    color: @white-clr;
+    a {
+      white-space: nowrap;
+      color: @brand-primary;
+      &:hover {
+        color: @white-clr;
+      }
+    }
+  }
+}
+
+// Articles
+
+article {
+
+  time {
+
+  }
+
+  time + * {
+    margin-left: 10px;
+  }
+}
+
+//Figure
+//---------------
+
+figure {
+
+  figcaption {
+  }
+
+}
+
+.top-row {
+  .clearfix();
+  overflow: hidden;
+  padding-top: 28px;
+  padding-bottom: 25px;
+
+  .contact-box {
+    display: inline-block;
+    float: right;
+
+    @media (max-width: 767px) {
+      float: none;
+    }
+
+    dl {
+      display: inline-block;
+      position: relative;
+      padding-left: 49px;
+      dt, dd {
+        color: @brand-primary;
+        display: inline-block;
+        font-family: @font-family-sec;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 38px;
+        a {
+          white-space: nowrap;
+        }
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 26px;
+        background: url("../images/icon1.png");
+        left: 0;
+        top: 5px;
+      }
+    }
+
+    .inline-list {
+      display: inline-block;
+      margin-right: 16px;
+      @media (max-width: 767px) {
+        display: block;
+        margin-right: 0;
+      }
+    }
+
+    dl + .inline-list {
+      margin-left: 22px;
+      @media (max-width: 991px) {
+        margin-left: 40px;
+      }
+      @media (max-width: 767px) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+dl.phone {
+  display: inline-block;
+  position: relative;
+  dt, dd {
+    color: @brand-primary;
+    display: inline-block;
+    font-family: @font-family-sec;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 38px;
+    a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.media-1 {
+  @media (max-width: 1199px){
+    text-align: center;
+.media-left{
+  display: block;
+  padding-right: 0;
+  padding-bottom: 15px;
+}
+  }
+}
+
+.media_mod{
+  .media-left{
+    padding-right: 23px;
+  }
+  &:hover{
+    .icon-lg-2{
+      color: rgba(51, 51, 51, 1);
+    }
+  }
+  & + .media{
+    margin-top: 32px;
+  }
+}

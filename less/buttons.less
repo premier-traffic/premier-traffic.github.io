@@ -1,0 +1,303 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: @btn-font-weight;
+  font-family: @font-family-sec;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  outline: none;
+  .button-size(@padding-base-vertical; @padding-base-horizontal; 14px; 32px; @border-radius-base);
+  .transition(.2s all ease);
+  padding-right: 6px;
+  position: relative;
+  box-shadow: 10px 10px 21px 1px rgba(0, 0, 0, 0.12);
+  //z-index: 2;
+
+  //&:before{
+  //  content: '';
+  //  position: absolute;
+  //  width: 0px;
+  //  height: 0px;
+  //  border-style: solid;
+  //  border-width: 26px 0px 26px 25px;
+  //  border-color: transparent transparent transparent #FFF;
+  //  right: -26px;
+  //  top: -1px;
+  //  .transition(.2s all ease);
+  //}
+  // span.triang{
+  //   position: absolute;
+  //   clip: rect(auto, auto, auto, 25px);
+  //   width: 64px;
+  //   height: 83px;
+  //   right: -40px;
+  //   top: -11px;
+  //   .transition(.2s all ease);
+  //   // transform: translate(0%, 0%);
+  //   //background: rgba(0, 255, 0, .5);
+
+  //   &:before{
+  //   content: '';
+  //   position: absolute;
+  //   width: 37px;
+  //   height: 37px;
+  //   //border-style: solid;
+  //   background: @white-clr;
+  //   //background: red;
+  //   .transform (rotate(45deg));    
+  //   //border-width: 26px 0px 26px 25px;
+  //   //border-color: transparent transparent transparent #FFF;
+  //     right: 20px;
+  //     top: 17px;
+  //     box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  //     
+  //   //z-index: 1;    
+  // }
+
+  // }
+
+  span.triang{
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: 37px;
+      height: 102%;
+      z-index: 0; 
+      clip: rect(auto, auto, auto, 0); 
+
+      &:before{
+        content: '';
+        position: absolute;
+        background: @white-clr;
+        width: 37px;
+        height: 37px;
+        left: 0;
+        top: 0px;
+        .transform (rotate(45deg));   
+        .transform-origin(6% 0%);
+        .transition(.2s all ease);
+        box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.12);
+      }
+  }
+
+  // &:focus{
+
+  // }
+
+  &:hover
+  {    
+    .button-variant(@brand-primary; @btn-default-bg; @brand-primary);    
+  }
+
+  // &:active,
+  // &.active {
+
+  // }
+
+  // &.disabled,
+  // &[disabled],
+  // fieldset[disabled] & {
+
+  // }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn-default {
+  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  &:focus{
+    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+  }
+  
+  &:hover{
+    .button-variant(@white-clr; @secondary-clr; @secondary-clr);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+     span.triang:before{
+       background: @secondary-clr;
+       box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+.btn-primary {
+  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  &:focus{
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+  }
+
+  &:hover{
+    .button-variant(@white-clr; @brand-primary; @brand-primary);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    span.triang:before{
+      background: @brand-primary;
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.btn-primary-2 {
+  .button-variant(@white-clr; @brand-primary; transparent);
+  &:focus{
+    .button-variant(@white-clr; @brand-primary; transparent);
+  }
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+  span.triang:before{
+    background: @brand-primary;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.12);
+  }
+  &:hover{
+    .button-variant(@brand-primary; @white-clr; @white-clr);
+    box-shadow: 10px 10px 21px 1px rgba(0, 0, 0, 0.12);
+    border-right-color: transparent;
+    span.triang:before{
+      background: @white-clr;
+      box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+//.btn-primary {
+//  .button-variant(@white-clr; @brand-primary; @brand-primary);
+//  &:focus{
+//    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+//  }
+//
+//  &:hover{
+//    .button-variant(@white-clr; @brand-primary; @brand-primary);
+//    span &:before{
+//      border-left-color: @brand-primary;
+//    }
+//  }
+//}
+// Success appears as green
+.btn-success {
+  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+  &:focus{
+    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+  }
+  
+}
+// Info appears as blue-green
+.btn-info {
+  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+  &:focus{
+    .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+  }
+  
+}
+// Warning appears as orange
+.btn-warning {
+  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+  &:focus{
+    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+  }
+
+  &:hover{
+    .button-variant(@white-clr; @default-mid; @default-mid);
+  } 
+}
+// Danger and error appear as red
+.btn-danger {
+  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+  &:focus{
+    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+  }
+  
+}
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  display: inline-block;
+  color: @btn-danger-color;
+  font-weight: 700;
+  border-radius: 0;
+  font-size: 14px;
+  position: relative;
+ 
+  &:focus{
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &,
+  &:active,
+  &.active,
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: transparent;
+    .box-shadow(none);
+  }
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: transparent;
+  }
+  &:hover {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+    background-color: transparent;    
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus {
+      color: @btn-link-disabled-color;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  padding: @padding-large-vertical @padding-large-horizontal;
+  //.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+}
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+.btn-xs {
+  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

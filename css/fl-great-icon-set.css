@@ -1,0 +1,369 @@
+/**
+ * Title: Great icon set Flaticon Pack
+ * Author: Taras Shypka
+ * Source: http://www.flaticon.com/packs/great-icon-set
+ * License:  CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/)
+ */
+
+@font-face {
+	font-family: "fl-great-icon-set";
+	src: url("../fonts/fl-great-icon-set.eot");
+	src: url("../fonts/fl-great-icon-set.eot#iefix") format("embedded-opentype"),
+	url("../fonts/fl-great-icon-set.woff") format("woff"),
+	url("../fonts/fl-great-icon-set.ttf") format("truetype"),
+	url("../fonts/fl-great-icon-set.svg") format("svg");
+	font-weight: normal; 
+	font-style: normal;
+}
+
+.fl-great-icon-set-ico,
+[class^="fl-great-icon-set-"]:before, [class*=" fl-great-icon-set-"]:before,
+[class^="fl-great-icon-set-"]:after, [class*=" fl-great-icon-set-"]:after {   
+	font-family: 'fl-great-icon-set';
+    font-size: inherit;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.fl-great-icon-set-actualization:before {
+	content: "\e000";
+}
+.fl-great-icon-set-add177:before {
+	content: "\e001";
+}
+.fl-great-icon-set-alarm49:before {
+	content: "\e002";
+}
+.fl-great-icon-set-arrow626:before {
+	content: "\e003";
+}
+.fl-great-icon-set-arrow627:before {
+	content: "\e004";
+}
+.fl-great-icon-set-ball38:before {
+	content: "\e005";
+}
+.fl-great-icon-set-band14:before {
+	content: "\e006";
+}
+.fl-great-icon-set-battery149:before {
+	content: "\e007";
+}
+.fl-great-icon-set-bell44:before {
+	content: "\e008";
+}
+.fl-great-icon-set-bluetooth20:before {
+	content: "\e009";
+}
+.fl-great-icon-set-book207:before {
+	content: "\e00a";
+}
+.fl-great-icon-set-bottle38:before {
+	content: "\e00b";
+}
+.fl-great-icon-set-button10:before {
+	content: "\e00c";
+}
+.fl-great-icon-set-button9:before {
+	content: "\e00d";
+}
+.fl-great-icon-set-cassette17:before {
+	content: "\e00e";
+}
+.fl-great-icon-set-chat73:before {
+	content: "\e00f";
+}
+.fl-great-icon-set-checkmark22:before {
+	content: "\e010";
+}
+.fl-great-icon-set-chronometer24:before {
+	content: "\e011";
+}
+.fl-great-icon-set-circular264:before {
+	content: "\e012";
+}
+.fl-great-icon-set-cloud301:before {
+	content: "\e013";
+}
+.fl-great-icon-set-code42:before {
+	content: "\e014";
+}
+.fl-great-icon-set-coffee66:before {
+	content: "\e015";
+}
+.fl-great-icon-set-compass105:before {
+	content: "\e016";
+}
+.fl-great-icon-set-configuration20:before {
+	content: "\e017";
+}
+.fl-great-icon-set-credit95:before {
+	content: "\e018";
+}
+.fl-great-icon-set-crescent32:before {
+	content: "\e019";
+}
+.fl-great-icon-set-cross100:before {
+	content: "\e01a";
+}
+.fl-great-icon-set-crosshair15:before {
+	content: "\e01b";
+}
+.fl-great-icon-set-design31:before {
+	content: "\e01c";
+}
+.fl-great-icon-set-diamond37:before {
+	content: "\e01d";
+}
+.fl-great-icon-set-digital22:before {
+	content: "\e01e";
+}
+.fl-great-icon-set-disc29:before {
+	content: "\e01f";
+}
+.fl-great-icon-set-dislike15:before {
+	content: "\e020";
+}
+.fl-great-icon-set-down102:before {
+	content: "\e021";
+}
+.fl-great-icon-set-download161:before {
+	content: "\e022";
+}
+.fl-great-icon-set-electrical27:before {
+	content: "\e023";
+}
+.fl-great-icon-set-electrical28:before {
+	content: "\e024";
+}
+.fl-great-icon-set-equalizer32:before {
+	content: "\e025";
+}
+.fl-great-icon-set-fast41:before {
+	content: "\e026";
+}
+.fl-great-icon-set-favorites5:before {
+	content: "\e027";
+}
+.fl-great-icon-set-file93:before {
+	content: "\e028";
+}
+.fl-great-icon-set-flash24:before {
+	content: "\e029";
+}
+.fl-great-icon-set-folder213:before {
+	content: "\e02a";
+}
+.fl-great-icon-set-games37:before {
+	content: "\e02b";
+}
+.fl-great-icon-set-ghost7:before {
+	content: "\e02c";
+}
+.fl-great-icon-set-glass49:before {
+	content: "\e02d";
+}
+.fl-great-icon-set-global39:before {
+	content: "\e02e";
+}
+.fl-great-icon-set-house139:before {
+	content: "\e02f";
+}
+.fl-great-icon-set-ice78:before {
+	content: "\e030";
+}
+.fl-great-icon-set-image84:before {
+	content: "\e031";
+}
+.fl-great-icon-set-ink16:before {
+	content: "\e032";
+}
+.fl-great-icon-set-key170:before {
+	content: "\e033";
+}
+.fl-great-icon-set-keyword5:before {
+	content: "\e034";
+}
+.fl-great-icon-set-lantern19:before {
+	content: "\e035";
+}
+.fl-great-icon-set-left204:before {
+	content: "\e036";
+}
+.fl-great-icon-set-lifesaver8:before {
+	content: "\e037";
+}
+.fl-great-icon-set-light87:before {
+	content: "\e038";
+}
+.fl-great-icon-set-lightbulb52:before {
+	content: "\e039";
+}
+.fl-great-icon-set-like76:before {
+	content: "\e03a";
+}
+.fl-great-icon-set-like77:before {
+	content: "\e03b";
+}
+.fl-great-icon-set-link59:before {
+	content: "\e03c";
+}
+.fl-great-icon-set-liquid13:before {
+	content: "\e03d";
+}
+.fl-great-icon-set-list87:before {
+	content: "\e03e";
+}
+.fl-great-icon-set-locked55:before {
+	content: "\e03f";
+}
+.fl-great-icon-set-menu54:before {
+	content: "\e040";
+}
+.fl-great-icon-set-microphone83:before {
+	content: "\e041";
+}
+.fl-great-icon-set-mobile226:before {
+	content: "\e042";
+}
+.fl-great-icon-set-monitor85:before {
+	content: "\e043";
+}
+.fl-great-icon-set-monthly5:before {
+	content: "\e044";
+}
+.fl-great-icon-set-more19:before {
+	content: "\e045";
+}
+.fl-great-icon-set-more20:before {
+	content: "\e046";
+}
+.fl-great-icon-set-mouse48:before {
+	content: "\e047";
+}
+.fl-great-icon-set-musical115:before {
+	content: "\e048";
+}
+.fl-great-icon-set-network38:before {
+	content: "\e049";
+}
+.fl-great-icon-set-new99:before {
+	content: "\e04a";
+}
+.fl-great-icon-set-nine19:before {
+	content: "\e04b";
+}
+.fl-great-icon-set-notebook69:before {
+	content: "\e04c";
+}
+.fl-great-icon-set-pause43:before {
+	content: "\e04d";
+}
+.fl-great-icon-set-pencil107:before {
+	content: "\e04e";
+}
+.fl-great-icon-set-pendrive8:before {
+	content: "\e04f";
+}
+.fl-great-icon-set-photo208:before {
+	content: "\e050";
+}
+.fl-great-icon-set-placeholder34:before {
+	content: "\e051";
+}
+.fl-great-icon-set-portfolio36:before {
+	content: "\e052";
+}
+.fl-great-icon-set-print40:before {
+	content: "\e053";
+}
+.fl-great-icon-set-rectangle19:before {
+	content: "\e054";
+}
+.fl-great-icon-set-recycle74:before {
+	content: "\e055";
+}
+.fl-great-icon-set-rewind43:before {
+	content: "\e056";
+}
+.fl-great-icon-set-right204:before {
+	content: "\e057";
+}
+.fl-great-icon-set-save19:before {
+	content: "\e058";
+}
+.fl-great-icon-set-searching40:before {
+	content: "\e059";
+}
+.fl-great-icon-set-share37:before {
+	content: "\e05a";
+}
+.fl-great-icon-set-shield91:before {
+	content: "\e05b";
+}
+.fl-great-icon-set-shuffle21:before {
+	content: "\e05c";
+}
+.fl-great-icon-set-speaker110:before {
+	content: "\e05d";
+}
+.fl-great-icon-set-sportive64:before {
+	content: "\e05e";
+}
+.fl-great-icon-set-sun90:before {
+	content: "\e05f";
+}
+.fl-great-icon-set-tag70:before {
+	content: "\e060";
+}
+.fl-great-icon-set-text149:before {
+	content: "\e061";
+}
+.fl-great-icon-set-thermometer53:before {
+	content: "\e062";
+}
+.fl-great-icon-set-traffic20:before {
+	content: "\e063";
+}
+.fl-great-icon-set-tree108:before {
+	content: "\e064";
+}
+.fl-great-icon-set-trophy70:before {
+	content: "\e065";
+}
+.fl-great-icon-set-two373:before {
+	content: "\e066";
+}
+.fl-great-icon-set-two374:before {
+	content: "\e067";
+}
+.fl-great-icon-set-up154:before {
+	content: "\e068";
+}
+.fl-great-icon-set-upload117:before {
+	content: "\e069";
+}
+.fl-great-icon-set-upper12:before {
+	content: "\e06a";
+}
+.fl-great-icon-set-user156:before {
+	content: "\e06b";
+}
+.fl-great-icon-set-video172:before {
+	content: "\e06c";
+}
+.fl-great-icon-set-visible11:before {
+	content: "\e06d";
+}
+.fl-great-icon-set-volume45:before {
+	content: "\e06e";
+}
+.fl-great-icon-set-wallet32:before {
+	content: "\e06f";
+}
+.fl-great-icon-set-washing14:before {
+	content: "\e070";
+}
+.fl-great-icon-set-wifi80:before {
+	content: "\e071";
+}

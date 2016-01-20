@@ -1,0 +1,389 @@
+@import "variables.less";
+@import "mixins.less";
+
+@input-color: #777;
+
+/* Control Holder */  
+.booking-form {
+  position: relative;
+  font: 400 15px/25px @font-family-base;
+}
+.booking-form input,
+.booking-form textarea {
+  outline: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  color: @text-color;
+  background: #fff;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+* + .booking-form{
+	margin-top: 28px;
+}
+.booking-form textarea {
+
+}
+.booking-form .cntr:before, .booking-form .cntr:after {
+  
+}
+.booking-form .cntr:after {
+}
+.booking-form .cntr .col {
+  
+}
+.booking-form .cntr .col + .col {
+
+}
+.booking-form a[data-type='submit'] {
+  display: inline-block;
+  line-height: 30px;
+
+  text-align: center;
+}
+.booking-form a[data-type='submit']:hover {
+}
+
+
+.tmInput, .tmDatepicker, .tmSelect {
+  position: relative;
+}
+
+.tmInput input, .tmDatepicker input, .tmSelect input {
+  padding-left: 14px;
+  background: transparent;
+
+}
+
+.tmDatepicker, .tmSelect {
+  display: block;
+}
+.tmDatepicker input, .tmSelect input {
+  padding-right: 40px;
+  z-index: 1;
+  font-family: @font-family-base;
+  font-size: 15px;
+
+  @media (min-width:768px) and (max-width:979px){
+    font-size: 12px;
+  }
+
+}
+.tmDatepicker:after, .tmSelect:after {
+  content: "\f107";
+  position: absolute;
+  top: 36%;
+  margin-top: -10px;
+  right: 3px;
+  font: 400 20px/24px "FontAwesome";
+  color: #fff;
+  background: @secondary-clr;
+  padding: 4px 10px;
+  z-index: 0;
+  .border-radius(5px);
+}
+
+.tmSelect li{
+background: #fff;
+.border-radius(5px);
+}
+
+
+.controlHolder {
+  position: relative;
+}
+
+
+
+.cntr + .btn {
+  margin-top: 30px;
+}
+
+
+
+/* Messages */
+.error-message {
+  position: absolute;
+  top: 2px;
+  right: 66px;
+  font-weight: normal;
+  text-align: right;
+  width: 100%;
+  font-size: 10px;
+  line-height: 10px;
+  z-index: 4;
+  color: #FE5353;
+}
+
+.success-message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 5px 0px;
+  color: #13FF63;
+  font-size: 16px;
+  line-height: 15px;
+}
+
+/* transformSelect CSS */
+.tmSelect {
+  clear: both;
+  width: 100%;
+  margin: 0px;
+}
+.tmSelect li {
+  position: relative;
+  list-style: none;
+}
+.tmSelect span, .tmSelect input[type=text] {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  left: 0;
+  top: 0;
+  margin: 0;
+}
+
+.tmSelect.auto {
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0 20px 0;
+  line-height: 20px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  color: #888888;
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tmSelect.auto span {
+  background: transparent;
+}
+.tmSelect.auto ul {
+  margin: 1px 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background: #F9F9F9;
+}
+.tmSelect.auto > li:first-child > span {
+  padding: 7px 12px;
+  width: 35px;
+  height: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tmSelect ul, .tmSelect .transformSelectDropdown {
+  position: absolute;
+  width: 100%;
+  max-height: 210px;
+  padding: 7px 0px;
+  margin: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  color: #888888;
+  background: #fff;
+  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: none;
+  background: #F9F9F9;
+  z-index: 10;
+  .border-radius(5px);
+  .box-shadow(0px 5px 17px -4px #777);
+}
+.tmSelect ul span, .tmSelect .transformSelectDropdown span {
+  border: 0;
+  color: #777;
+  padding: 5px 13px;
+}
+.tmSelect ul span:hover, .tmSelect .transformSelectDropdown span:hover {
+  background: #CCC;
+}
+.tmSelect ul li input[type=checkbox] {
+  position: relative;
+  top: 2px;
+  margin: 0 5px 0 0;
+  cursor: pointer;
+}
+
+/* Radio */
+.trans-element-radio {
+  display: inline-block;
+  display: block;
+  zoom: 1;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.tmRadio {
+  padding-left: 0;
+}
+.tmRadio p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.tmRadio p {
+  padding-bottom: 0;
+  margin-bottom: 3px;
+}
+.tmRadio input {
+  margin-right: 5px;
+}
+.tmRadio .unchecked, .tmRadio .checked {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.tmRadio .unchecked:after, .tmRadio .checked:after {
+  content: '\f10c';
+  position: relative;
+  top: 2px;
+  font: normal normal 18px 'FontAwesome';
+  color: #CCC;
+}
+.tmRadio .checked:after {
+  content: '\f05d';
+}
+
+/* Checkbox */
+.trans-element-checkbox {
+  cursor: pointer;
+  zoom: 1;
+}
+.trans-element-checkbox span {
+  padding-left: 40px;
+}
+.trans-element-checkbox.checked:after {
+  content: '\f046';
+}
+.trans-element-checkbox:after {
+  content: '\f096';
+  position: relative;
+  display: inline-block;
+  top: 2px;
+  width: 17px;
+  font: normal normal 18px 'FontAwesome';
+  color: #CCC;
+}
+.trans-element-checkbox.unchecked:after {
+  content: '\f096';
+}
+
+.tmCheckbox, .tmRadio {
+  margin-left: 0;
+  padding-left: 0;
+  padding: 0;
+}
+.tmCheckbox span, .tmRadio span {
+  position: relative;
+  margin-right: 10px;
+}
+
+.ui-datepicker {
+  padding: 10px;
+  width: 282px;
+  font-size: 13px;
+  display: none;
+  z-index: 100 !important;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  color: #888888;
+  background: #fff;
+  background: #F9F9F9;
+}
+.ui-datepicker a {
+  color: #777;
+}
+.ui-datepicker a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  cursor: pointer;
+  float: left;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+}
+
+.ui-datepicker-calendar {
+  margin: 10px 11px;
+}
+.ui-datepicker-calendar td {
+  padding: 1px 10px;
+  text-align: center;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day, .ui-datepicker-calendar .ui-datepicker-today {
+  padding: 3px;
+  background: #79c4b3;
+  color: #FFF;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day a, .ui-datepicker-calendar .ui-datepicker-today a {
+  color: #FFF;
+}
+.ui-datepicker-calendar .ui-datepicker-today {
+  background: #5c7b74;
+}
+
+button.ui-state-default {
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  padding: 4px 6px;
+  background: #79c4b3;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+button.ui-state-default::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+button.ui-state-default[data-handler='today'] {
+  display: none;
+}
+button.ui-state-default:hover {
+  background: #5c7b74;
+}
+
+.ui-datepicker-close {
+  float: right;
+}
