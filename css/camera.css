@@ -3,6 +3,10 @@
 /*========================================================
                         Camera
 =========================================================*/
+.lightFooterHeading {
+  color: #ffffff;
+}
+
 .camera_container {
   position: relative;
   padding-bottom: 45.41015625%;
