@@ -3,6 +3,22 @@
 		margin-top: 1em;
 }
 
+.navbar-brand a:before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    background: url("../images/premierLogo.png");
+    background-size: cover;
+    top: -34px;
+    left: 0;
+}
+
+.navbar-brand a {
+  position: relative;
+  padding-left: 155px;
+}
+
 /* 
 .bg-primary, .toTop {
 	background: rgb(51, 51, 153);
