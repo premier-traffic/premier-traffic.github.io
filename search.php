@@ -37,42 +37,37 @@
   <!--========================================================
                             HEADER
   =========================================================-->
-    
+
  <header class="shadow-2">
 
-        <section class="top-row shadow-1 center767">
-            <div class="container">
-                <div class="navbar-header center991">
-                    <h1 data-type='rd-navbar-brand' class="navbar-brand">
-                        <a href="./">Wrecker Sales </a>
-                    </h1>
-                </div>
-
-                <div class="contact-box">
-                    <dl>
-                        <dt>
-                            Tel:
-                        </dt>
-                        <dd>
-                            <a href="callto:#">800-2345-6789</a>
-                        </dd>
-                    </dl>
-
-                    <ul class="inline-list">
-                        <li>
-                            <a href="#" class="fa fa-facebook">facebook</a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa fa-twitter">twitter</a>
-                        </li>
-                        <li>
-                            <a href="#" class="fa  fa-google-plus">google-plus</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </section>
+   <section class="top-row shadow-1 center767">
+       <div class="container">
+       <div class='logo-container'>
+        <div class='logo'>
+            <h6>Premier</h6>
+        </div>
+        <p>Traffic Management Ltd</p>
+      </div>
+       <div class="contact-box custom-topmargin">
+         <dl>
+           <dt>
+             Tel:
+           </dt>
+           <dd>
+             <a href="callto:#">01388 815 661</a>
+           </dd>
+         </dl>
+         <dl class="custom-margin">
+           <dt>
+             Email:
+           </dt>
+           <dd>
+             <a href="mailto:info@premier-traffic.co.uk">info@premier-traffic.co.uk</a>
+           </dd>
+         </dl>
+       </div>
+     </div>
+   </section>
 
         <div id="stuck_container" class="stuck_container">
             <div class="container">
@@ -148,7 +143,7 @@
             <div id="search-results"></div>
         </div>
     </section>
-  </main>  
+  </main>
 
   <!--========================================================
                             FOOTER
@@ -169,9 +164,9 @@
   </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- Include all compiled plugins (below), or include individual files as needed -->         
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/tm-scripts.js"></script>    
+    <script src="js/tm-scripts.js"></script>
   <!-- </script> -->
 
 
