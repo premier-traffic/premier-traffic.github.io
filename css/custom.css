@@ -1,4 +1,9 @@
-.servicesHeading { 
+
+.lightFooterHeading {
+  color: #ffffff;
+}
+
+.servicesHeading {
 		color: white;
 		margin-top: 1em;
 }
@@ -19,7 +24,7 @@
   padding-left: 155px;
 }
 
-/* 
+/*
 .bg-primary, .toTop {
 	background: rgb(51, 51, 153);
 
