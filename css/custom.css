@@ -9,20 +9,62 @@
 }
 
 .navbar-brand a:before {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 120px;
-    background: url("../images/premierLogo.png");
-    background-size: cover;
-    top: -34px;
-    left: 0;
+ /*    content: '';
+ position: absolute;
+ width: 150px;
+ height: 120px;
+ background: url("../images/premierLogo.png");
+ background-size: cover;
+ top: -34px;
+ left: 0; */
 }
 
 .navbar-brand a {
   position: relative;
   padding-left: 155px;
 }
+
+
+.top-row .contact-box dl:before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 26px;
+    background: url("../images/icon1.png");
+    left: 0;
+    top: 5px;
+    display: none;
+}
+
+.customLogo {
+    background-color: yellow;
+    color:black;
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-align: center;
+    width:auto;
+    display: inline-block;
+    position: relative;
+}
+.customLogo h6 {
+    font-weight: 900;
+    font-size: 1.5em;
+    color:black;
+    line-height: 1.3;
+    text-shadow: white 0px 1px 0px;
+}
+
+.customLogo p {
+    background-color: blue;
+    color:white;
+    border-radius: 10px;
+    margin-top: 0;
+    padding:2px 9px;
+    font-weight: 700;
+
+}
+
+
 
 /*
 .bg-primary, .toTop {
