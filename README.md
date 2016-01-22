@@ -16,4 +16,17 @@ lessc bootstrap.less bootstrap.css
 
 Pay special attention to less/variables.less
 
-It's worth having a look at the source code for less to see how it works.
+I highly recommend having a look at the less source code to see how it works.
+
+Also, the site isn't using minified css!
+
+So:
+
+```
+npm install -g less-plugin-clean-css
+
+$ lessc --clean-css bootstrap.less bootstrap.min.css
+
+```
+
+Then go and change your index.html to point at the minified file instead of the unminified one.
