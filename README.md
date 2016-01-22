@@ -10,7 +10,7 @@ npm install -g less
 
 cd to site
 
-// compile less to bootstrap
+// compile less to css
 lessc bootstrap.less bootstrap.css
 ```
 
