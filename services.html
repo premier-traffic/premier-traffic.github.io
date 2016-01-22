@@ -10,12 +10,13 @@
     <title>Services</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Links -->
     <link rel="stylesheet" href="css/search.css"/>
     <link rel="stylesheet" type="text/css" href="css/custom.css">
-    
+    <link rel="stylesheet" href="css/google-map.css">
+
     <!--JS-->
     <script src="js/jquery.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
@@ -38,107 +39,113 @@
                               HEADER
     =========================================================-->
 
-    <header class="shadow-2">
-            <section class="top-row shadow-1 center767">
-                <div class="container">
-                    <div class="navbar-header center991">
-                        <h1 data-type='rd-navbar-brand' class="navbar-brand">
-                        <a href="./">Wrecker Sales </a>
-                    </h1>
-                    </div>
-                    <div class="contact-box">
-                        <dl>
-                            <dt>
-                                Tel:
-                            </dt>
-                            <dd>
-                                <a href="callto:#">800-2345-6789</a>
-                            </dd>
-                        </dl>
-                        <ul class="inline-list">
-                            <li>
-                                <a href="#" class="fa fa-facebook">facebook</a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-twitter">twitter</a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa  fa-google-plus">google-plus</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <div id="stuck_container" class="stuck_container">
-                <div class="container">
-                    <nav class="navbar navbar-default navbar-static-top ">
-                        <ul class="navbar-nav sf-menu" data-type="navbar">
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="aboutus.html">About</a>
-                            </li>
-                            <li class="dropdown ">
-                                <a href="services.html">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a href="#">Schemes<span
-                                            class="icon-menu material-design-keyboard53"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <a href="#hsschemes">High Speed Dual Carriageway & Motorway</a>
-                                            </li>
-                                            <li>
-                                                <a href="#urschemes">Urban & Rurural Schemes</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#stmvehicles">Specialist Traffic Management Vehicles</a>
-                                    </li>
-                                    <li>
-                                        <a href="#caddesign">CAD Design Site Specific Scheme Drawing</a>
-                                    </li>
-                                    <li>
-                                        <a href="#eventmanagement">Event Management</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="training.html">Training & Assessment</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="training1.html">One Day NHSSD 12a/b TM Operatives Health & Safety Course. </a></li>
-                                    <li><a href="training2.html">NHSSD 12a/b TM Operatives Assessments. </a></li>
-                                    <li><a href="training3.html">Two day NHSSD 12a/b TM Foreman's Training course. </a></li>
-                                    <li><a href="training4.html">Two day NHSSD 12/b LTMO Training course. </a></li>
-                                    <li><a href="training5.html">NHSSD 12a/b Traffic Safety & Control Officer course.</a></li>
-                                    <li><a href="training6.html">NHSSD 12 Impact Protection Vehicle Driver Training. </a></li>
-                                    <li><a href="training7.html">NHSSD 12 Refresher Training for TM Operatives and TM Foreman. </a></li>
-                                    <li><a href="training8.html">NHSSD 12/d Training days for T1, T2, T3, T4, T5, T6, T7. </a></li>
-                                    <li><a href="training9.html">NHSSD 12/d Assessments for T1, T2, T3, T4, T5, T6. </a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="hiresales.html">Hire & Sales</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a class="search-form_toggle" href="#"></a>
-                </div>
-                <div class="container  srch">
-                    <div class="search-form">
-                        <form id="search" action="search.php" method="GET" accept-charset="utf-8">
-                            <label class="search-form_label" for="in">
-                                <input id="in" class="search-form_input" type="text" name="s" placeholder="" />
-                                <span class="search-form_liveout"></span>
-                            </label>
-                            <button type="submit" class="search-form_submit fa-search"></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </header>
+    <header>
+      <section class="top-row shadow-1 center767">
+          <div class="container">
+
+           <div class="navbar-header center991 customLogo">
+               <h6>Premier</h6>
+               <p>Traffic Management Ltd</p>
+           </div>
+
+
+          <div class="contact-box">
+            <dl>
+              <dt>
+                Tel:
+              </dt>
+              <dd>
+                <a href="callto:#">01388 815 661</a>
+              </dd>
+            </dl>
+
+            <dl>
+              <dt>
+                Email:
+              </dt>
+              <dd>
+                <a href="callto:#">info@premier-traffic.co.uk</a>
+              </dd>
+            </dl>
+
+            <!-- <ul class="inline-list">
+              <li>
+                <a href="#" class="fa fa-facebook">facebook</a>
+              </li>
+              <li>
+                <a href="#" class="fa fa-twitter">twitter</a>
+              </li>
+              <li>
+                <a href="#" class="fa  fa-google-plus">google-plus</a>
+              </li>
+            </ul> -->
+
+          </div>
+        </div>
+      </section>
+
+      <div id="stuck_container" class="stuck_container">
+          <div class="container">
+              <nav class="navbar navbar-default navbar-static-top ">
+                  <ul class="navbar-nav sf-menu" data-type="navbar">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="aboutus.html">About</a>
+                      </li>
+                      <li class="dropdown ">
+                          <a href="services.html">Services</a>
+                          <ul class="dropdown-menu">
+                              <li>
+                                  <a href="#">Schemes<span
+                                      class="icon-menu material-design-keyboard53"></span></a>
+                                  <ul class="dropdown-menu">
+                                      <li>
+                                          <a href="/services.html#hsschemes">High Speed Dual Carriageway & Motorway</a>
+                                      </li>
+                                      <li>
+                                          <a href="/services.html#urschemes">Urban & Rural Schemes</a>
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="/services.html#stmvehicles">Specialist Traffic Management Vehicles</a>
+                              </li>
+                              <li>
+                                  <a href="/services.html#caddesign">CAD Design Site Specific Scheme Drawing</a>
+                              </li>
+                              <li>
+                                  <a href="/services.html#eventmanagement">Event Management</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="dropdown">
+                          <a href="training.html">Training & Assessment</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="training1.html">One Day NHSSD 12a/b TM Operatives Health & Safety Course. </a></li>
+                              <li><a href="training2.html">NHSSD 12a/b TM Operatives Assessments. </a></li>
+                              <li><a href="training3.html">Two day NHSSD 12a/b TM Foreman's Training course. </a></li>
+                              <li><a href="training4.html">Two day NHSSD 12/b LTMO Training course. </a></li>
+                              <li><a href="training5.html">NHSSD 12a/b Traffic Safety & Control Officer course.</a></li>
+                              <li><a href="training6.html">NHSSD 12 Impact Protection Vehicle Driver Training. </a></li>
+                              <li><a href="training7.html">NHSSD 12 Refresher Training for TM Operatives and TM Foreman. </a></li>
+                              <li><a href="training8.html">NHSSD 12/d Training days for T1, T2, T3, T4, T5, T6, T7. </a></li>
+                              <li><a href="training9.html">NHSSD 12/d Assessments for T1, T2, T3, T4, T5, T6. </a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="hiresales.html">Hire & Sales</a>
+                      </li>
+                  </ul>
+              </nav>
+              <!-- <a class="search-form_toggle" href="#"></a> -->
+          </div>
+
+      </div>
+
+
+    </header>
 
 
     <!--========================================================
@@ -240,8 +247,8 @@
                             <li><a href="#">Wide Load Officers.</a></li>
 
                         </ul>
-                     
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -273,11 +280,11 @@
                             <li><a href="#">Barrier systems.</a></li>
                             <li><a href="#">Priority Systems.</a></li>
                             <li><a href="#">Fully Qualified Workforce.</a></li>
-                                                 
+
 
                         </ul>
-                     
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -313,8 +320,8 @@
                             <li><a href="#">Light arrow board and sign.</a></li>
                             <li><a href="#">CCTV & audio warning for reversing.</a></li>
                         </ul>
-                     
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -325,23 +332,23 @@
                 <h3 class="text-primary">
                     CAD Design Site Specific Scheme Drawing
                 </h3>
-            
+
 
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-xs-12">
                         <img src="images/one-mile-of-the-southbound-carriageway.jpg" alt=""/>
                     </div>
                     <div class="col-md-7 col-sm-12 col-xs-12">
-                      
+
                      <p class="wow fadeInRight">
-                Premier’s fully trained CAD traffic designer’s use the latest 
-                computer aided design systems to layout and detail each 
-                aspect of a scheme. Premier provides full design scheme 
-                and planning which includes site surveys, CAD Drawings and 
+                Premier’s fully trained CAD traffic designer’s use the latest
+                computer aided design systems to layout and detail each
+                aspect of a scheme. Premier provides full design scheme
+                and planning which includes site surveys, CAD Drawings and
                 Client liaison meetings as part of each TM package.
                 </p>
-                     
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -351,23 +358,23 @@
                 <h3 class="text-primary">
                    Event Management
                 </h3>
-            
+
 
                 <div class="row">
                     <div class="col-md-5 col-sm-12 col-xs-12">
                         <img src="images/one-mile-of-the-southbound-carriageway.jpg" alt=""/>
                     </div>
                     <div class="col-md-7 col-sm-12 col-xs-12">
-                    
+
                      <p class="wow fadeInRight">
-                        Our dedicated events team can provide you with a 
-                        complete bespoke events package including the design, 
-                        liaison, implementation, marshalling and removal of all 
-                        traffic management requirements to ensure your event 
+                        Our dedicated events team can provide you with a
+                        complete bespoke events package including the design,
+                        liaison, implementation, marshalling and removal of all
+                        traffic management requirements to ensure your event
                         runs smoothly and trouble free.
                      </p>
-                     
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -378,19 +385,180 @@
     <!--========================================================
                             FOOTER
   =========================================================-->
-    <footer>
+  <footer>
 
-        <section class="bg-secondary rights">
-            <div class="container">
+    <section class="well3 bg-secondary">
 
-                <p>
-                    Wrecker Sales &#169; <span id="copyright-year"></span>&nbsp;
-                    <a href="index-5.html">Privacy Policy</a>
-                </p>
+      <div class="container">
+        <h2 class="lightFooterHeading">
+          Contact Us at Premier Traffic Management Limited
+        </h2>
+        <div class="row">
 
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="media media-1">
+              <!-- <div class="media-left">
+                <span class="icon-lg material-design-map103"></span>
+              </div> -->
+              <div class="media-body">
+                <h4>
+                  Email:
+                </br>
+                </br> info@premier-traffic.co.uk
+                </h4>
+                <!-- <address>
+                  <dl class="phone">
+                    <dt>
+                      Email:  
+                    </dt>
+                    <dd>
+                      <a href="callto:#"></a>
+                    </dd>
+                  </dl>
+                </address> -->
+              </div>
             </div>
-        </section>
-    </footer>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="media media-1">
+              <!-- <div class="media-left">
+                <span class="icon-lg material-design-map103"></span>
+              </div> -->
+              <div class="media-body">
+                <h4>
+                  Head Office:
+                </h4>
+                <address>
+                  <br/> Unit 13 Tudhoe Industrial Estate
+                  <br/> Tudhoe
+                  <br/> County Durham
+                  <br/> DL16 6TL
+                  <br/>
+
+                  <dl class="phone">
+                    <dt>
+                      Tel:
+                    </dt>
+                    <dd>
+                      <a href="callto:#">01388 815 661</a>
+                    </dd>
+                  </dl>
+                </address>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="media media-1">
+              <!-- <div class="media-left">
+                <span class="icon-lg material-design-map103"></span>
+              </div> -->
+              <div class="media-body">
+                <h4>
+                  Liverpool Office:
+                </h4>
+                <address>
+
+                  <br/> Unit 3 Weaver Industrial Estate
+                  <br/> Blackburn Street
+                  <br/> Garston
+                  <br/> Liverpool
+                  <br/> L19 8JA
+                  <br/>
+
+                  <dl class="phone">
+                    <dt>
+                      Tel:
+                    </dt>
+                    <dd>
+                      <a href="callto:#">0151 494 1188</a>
+                    </dd>
+                  </dl>
+                </address>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="media media-1">
+              <!-- <div class="media-left">
+                <span class="icon-lg material-design-map103"></span>
+              </div> -->
+              <div class="media-body">
+                <h4>
+                  Doncaster Office:
+                </h4>
+                <address>
+                  <dl class="phone">
+                    <dt>
+                      Tel:
+                    </dt>
+                    <dd>
+                      <a href="callto:#">01302 701013</a>
+                    </dd>
+                  </dl>
+                  <br/>
+                  <h4>
+                    Penrith Office:
+                  </h4>
+                  <address>
+                    <dl class="phone">
+                      <dt>
+                        Tel:
+                      </dt>
+                      <dd>
+                        <a href="callto:#">07985 126546</a>
+                      </dd>
+                    </dl>
+                    <br/>
+                    <h4>
+                      Northumberland Office:
+                    </h4>
+                    <address>
+                      <dl class="phone">
+                        <dt>
+                          Tel:
+                        </dt>
+                        <dd>
+                          <a href="callto:#">01670 810188</a>
+                        </dd>
+                      </dl>
+                      <br/>
+
+
+                    </address>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+        <div id="google-map" class="map_model"></div>
+        <ul class="map_locations">
+            <li data-x="-2.899552" data-y="53.346073">
+            <li data-x="-1.585720" data-y="54.716497">
+                <p> 9870 St Vincent Place, Glasgow, DC 45 Fr 45. <span>800 2345-6789</span></p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="bg-secondary rights">
+      <div class="container">
+
+        <p>
+          Premier Traffic Management Limited &#169;
+          <span id="copyright-year"></span>&nbsp;
+
+        </p>
+
+      </div>
+    </section>
+  </footer>
 </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -401,4 +569,5 @@
 
 
 </body>
+
 </html>
