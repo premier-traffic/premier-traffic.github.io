@@ -64,17 +64,6 @@
 
 }
 
-#noBullet li{
-  list-style:none !important;
-  list-style-type:none !important;
-  background: none !important;
-}
-
-.noBulletClass {
-  list-style:none;
-  list-style-type:none;
-  background: none;
-}
 
 /*
 .bg-primary, .toTop {
