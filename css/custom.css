@@ -76,6 +76,16 @@ text-align: center;
 padding:10px;
 }
 
+.services img {
+    height:200px;
+    width:250px;
+
+}
+.servicesBody img {
+
+    height : 350px;
+    width: 350px;
+}
 
 
 
