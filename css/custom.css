@@ -68,6 +68,29 @@
   padding-bottom: 40px;
 }
 
+.footerLogos img {
+    height:70px;
+    width: auto;
+
+}
+
+.footerLogos {
+background-color: black;
+text-align: center;
+padding:10px;
+}
+
+
+
+
+
+/*
+.bg-primary, .toTop {
+	background: rgb(51, 51, 153);
+
+>>>>>>> master
+}
+
 
 
  */
