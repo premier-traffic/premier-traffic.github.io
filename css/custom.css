@@ -1,6 +1,6 @@
 
 .lightFooterHeading {
-  color: #ff4b33;
+  color: #F6D012; 
 }
 
 .servicesHeading {
@@ -87,8 +87,8 @@ padding:10px;
 }
 .servicesBody img {
 
-    height : 350px;
-    width: 350px;
+    height : 300px;
+    width: auto;
 }
 
 
