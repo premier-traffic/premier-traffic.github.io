@@ -95,11 +95,9 @@ padding:10px;
   margin-top: 25px;
 }
 
-.navbar-nav .dropdown:nth-child(2) .dropdown-menu {
-    width: 500px
+.navbar-nav li:nth-of-type(4) .dropdown-menu {
+    width: 448px
 }
-
-
 
  */
 @brand-primary:         #0000ff; // gr
