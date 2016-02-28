@@ -107,5 +107,10 @@ section.sect-404 {
   background-size: cover;
 }
 
- */
+@media(max-width: 538px) {
+  .custom-margin {
+    margin-left: 0;
+  }
+}
+
 @brand-primary:         #0000ff; // gr
