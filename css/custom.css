@@ -100,7 +100,11 @@ padding:10px;
 }
 
 section.sect-404 {
+  padding-top: 110px;
+  padding-bottom: 253px;
   background: url("../images/specialist-vehicle2.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
  */
