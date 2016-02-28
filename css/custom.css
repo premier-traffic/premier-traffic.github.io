@@ -99,5 +99,9 @@ padding:10px;
     width: 448px
 }
 
+section.sect-404 {
+  background: url("../images/specialist-vehicle2.jpg");
+}
+
  */
 @brand-primary:         #0000ff; // gr
